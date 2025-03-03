@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Static HTML Page</title>
+</head>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #ff5a5f;
+  }
+
+  h1 {
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    margin: 30px 50px;
+    font-size: 3rem;
+  }
+
+  input {
+    padding: 10px 20px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    background: rgb(16, 208, 16);
+    font-size: 1.5rem;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    transition: 0.3s;
+  }
+
+  input:hover {
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+  }
+</style>
+<body>
+  <h1>Hello, this is a static HTML page served by Flask!</h1>
+  <form action="{{ url_for('register') }}">
+    <input type="submit" value="Register" />
+  </form>
+</body>
+</html>
